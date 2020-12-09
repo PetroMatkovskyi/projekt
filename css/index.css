@@ -56,11 +56,6 @@ h2 {
     text-align: center;
 }
 
-/*щоб зображення не мішали*/
-img {
-    height: 60px;
-}
-
 h3 {
     color: #62a142;
     font-family: 'Source Sans Pro', sans-serif;
