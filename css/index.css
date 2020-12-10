@@ -142,11 +142,6 @@ h2 {
     font-weight: 100;
 }
 
-/*щоб зображення не мішали*/
-img {
-    height: 60px;
-}
-
 h3 {
     color: #62a142;
     font-weight: bold;
