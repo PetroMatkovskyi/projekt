@@ -1,25 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-
-.name_top {
-    color: #f09b13;
-    font-family: 'Bree Serif', serif;
-    font-size: 34px;
+h1 h2 h3 h4 div nav a hr button img span p label input form {
+    margin: 0;
+    padding: 0;
 }
 
-#intro {
-    background-color: burlywood;
+:root {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #534939;
+    scroll-behavior: smooth;
+    --accent-font-family: 'Bree Serif', serif;
+    --accent-color: #f09b13;
+}
+
+body {
+    max-width: 1500px;
+    margin: auto;
+}
+
+@media (min-width: 990px) {
+
+    .burger-icon {
+        display: none;
+    }
+
+    header .menu_top {
+        display: flex;
+        align-items: center
+    }
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../img/big-burgers.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#upper_part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.name_top h1 {
+    color: var(--accent-color);
+    font-family: var(--accent-font-family);
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.menu_top {
+    display: none;
+
 }
 
 .menu_top a {
     color: #ffffff;
-    font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 600;
     margin: 10px 15px 10px 15px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 1px;
 }
+
+.menu_top img {
+    width: 30px;
+    height: 30px;
+}
+
 
 .menu_top a:hover {
     color: #e7903b;
@@ -28,7 +82,15 @@
     padding-bottom: 5px;
 }
 
+
 /*moto*/
+#motto {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 130px 0;
+
+}
+
 #motto h2 {
     font-size: 56px;
     color: #ffffff;
@@ -41,6 +103,37 @@
     text-transform: uppercase;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttons button {
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #e7903b;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    height: 61px;
+    font-family: var(----accent-font-family:);
+    margin: 0 10px;
+    padding: 0 30px;
+    letter-spacing: .1em;
+    color: #fff;
+}
+
+.catering {
+    background: #e7903b;
+}
+
+
+.see_menu {
+    background: transparent;
+    font-weight: 400;
+}
+
 h2 {
     font-family: 'Bree Serif', serif;
     font-size: 41px;
@@ -49,16 +142,13 @@ h2 {
     font-weight: 100;
 }
 
-/*moto buttons*/
-#motto .buttons {
-    border: 1px solid #f09b13;
-    border-radius: 10px;
-    text-align: center;
+/*щоб зображення не мішали*/
+img {
+    height: 60px;
 }
 
 h3 {
     color: #62a142;
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
 }
 
@@ -70,7 +160,6 @@ h3 {
 
 .green_i {
     color: #62a142;
-    font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-size: 20px;
     font-weight: 400;
@@ -94,7 +183,6 @@ h3 {
 }
 
 .p_normal {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     color: #534939;
     font-weight: 600;
@@ -127,7 +215,6 @@ h3 {
 }
 
 #current_location {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
@@ -139,7 +226,6 @@ h3 {
 
 footer {
     background-color: #282623;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .menu_low a {
@@ -148,7 +234,6 @@ footer {
     font-weight: bold;
     text-decoration: none;
     padding: 0px 10px 5px 10px;
-
 }
 
 .menu_low a:hover {
@@ -156,7 +241,7 @@ footer {
 }
 
 .name_low {
-    font-family: 'Bree Serif', serif;
+    font-family: var(--font-family);
     color: #f09b13;
     font-size: 28px;
     font-weight: 400;
@@ -164,5 +249,15 @@ footer {
 
 footer p {
     color: #6d7074;
-    text-align: center;
+    text-align: center
 }
+
+.burger-icon {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 12px 8px;
+}
+
+#burger-checkbox {
+    display: none;
