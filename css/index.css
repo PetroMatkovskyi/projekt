@@ -134,6 +134,14 @@ header {
     font-weight: 400;
 }
 
+.see_menu:hover {
+    color: #62a142;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #62a142;
+    transition: all 0.2s ease-out;
+}
+
 h2 {
     font-family: 'Bree Serif', serif;
     font-size: 41px;
@@ -256,3 +264,10 @@ footer p {
 
 #burger-checkbox {
     display: none;
+}
+
+/*для красивішого маштабування*/
+img,
+#awards {
+    max-width: 650px
+}
