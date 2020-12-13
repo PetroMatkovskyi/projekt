@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgers Food Truck Website Temlate</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">-->
     <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
     <header>
         <section id="intro">
@@ -22,11 +22,13 @@
                     <a href="#schedule">Schedule</a>
                     <a href="#catering">Catering</a>
                     <a href="#contacns">Contacns</a>
-                    <a class="social" href="#facebook"><img src="img/facebook.png" width="30" height="30" alt="facebook.com"></a>
-                    <a class="social" href="#twitter"><img src="img/twitter.png" width="30" height="30" alt="twitter.com"></a>
-                    <a class="social" href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
+                    <div class="social">
+                        <a class="social" href="#facebook"><img src="img/facebook.png" width="30" height="30" alt="facebook.com"></a>
+                        <a class="social" href="#twitter"><img src="img/twitter.png" width="30" height="30" alt="twitter.com"></a>
+                        <a class="social" href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
+                    </div>
                 </nav>
-                 <label class="burger-icon" for="burger-checkbox">☰</label>
+                <label class="burger-icon" for="burger-checkbox">☰</label>
             </div>
             <section id="motto">
                 <h2>You Have a Party - We Bring You<span class="burgers"> burgers!</span>
@@ -40,17 +42,13 @@
     </header>
     <main>
         <section id="about">
-            <div class="img burger on the windows"><img src="img/burger_on_the_window.jpg" alt="burger on the window"></div>
-            <div class="about freddy burger">
-                <div class="normal header2">
-                    <h2>About Freddy Burger</h2>
-                    <hr class="green-border">
-                </div>
-                <div class="p_normal">
-                    <p>Freddy Burger is a superior Burger Food Truck you can find roaming the streets of Lviv. We are a symbol of independence and premium budget food on the go. We cook our burgers using the freshest and the highest quality local ingredients.</p>
-                    <p>If you want to arrange a budget party and love our gourmet burgers, you can book our truck and feed your guests with excellent street food.</p>
-                </div>
-                <div class="about button">
+            <div class="burger_on_the_windows"><img src="img/burger_on_the_window.jpg" alt="burger on the window"></div>
+            <div class="text">
+                <h2>About Freddy Burger</h2>
+                <hr class="green-border">
+                <p>Freddy Burger is a superior Burger Food Truck you can find roaming the streets of Lviv. We are a symbol of independence and premium budget food on the go. We cook our burgers using the freshest and the highest quality local ingredients.</p>
+                <p>If you want to arrange a budget party and love our gourmet burgers, you can book our truck and feed your guests with excellent street food.</p>
+                <div class="about_button">
                     <button>MORE ABOUT US</button>
                 </div>
             </div>
@@ -65,50 +63,61 @@
                 <button>Vegetarian</button>
                 <button>Drinks</button>
             </div>
-            <div class="menu main">
-                <div class="left menu">
-                    <div class="menu_items">
+            <div class="menu_main">
+                <div class="menu_items">
+                    <div class="dish">
                         <div class="name_dish">
-                            <h3>Truck Burger<span class="border_in_menu"></span> $10</h3>
+                            <h3>Truck Burger</h3>
                         </div>
-                        <div class="p_normal">
-                            <p>Prime beef patty, aged cheddar, pickled onions, arugula, bacon jam, pommes frites, special sauce, brioche.</p>
+                        <div class="item_separator"></div>
+                        <div class="name_dish">
+                            <h3>$10</h3>
                         </div>
                     </div>
-                    <div class="menu_items">
-                        <div class="name_dish">
-                            <h3>Burger King<span class="border_in_menu"></span> $12</h3>
-                        </div>
-
-                        <div class="p_normal">
-                            <p>Prime beef patty, glazed pork belly, American cheese, chili relish, mustard aioli, arugula, sesame brioche, frizzled onions.</p>
-                        </div>
-                    </div>
+                    <p>Prime beef patty, aged cheddar, pickled onions, arugula, bacon jam, pommes frites, special sauce, brioche.</p>
                 </div>
-                <div class="right menu">
-                    <div class="menu_items">
+                <div class="menu_items">
+                    <div class="dish">
                         <div class="name_dish">
-                            <h3>Freddy's Fries <span class="border_in_menu"></span>$3</h3>
+                            <h3>Freddy's Fries</h3>
                         </div>
-                        <div class="p_normal">
-                            <p>Potato, salt. Simple and tasty.</p>
+                        <div class="item_separator"></div>
+                        <div class="name_dish">
+                            <h3>$3</h3>
                         </div>
                     </div>
-                    <div class="menu_items">
+                    <p>Potato, salt. Simple and tasty.</p>
+                </div>
+                <div class="menu_items">
+                    <div class="dish">
                         <div class="name_dish">
-                            <h3>Fish & Chips<span class="border_in_menu"></span> $7</h3>
+                            <h3>Burger King</h3>
                         </div>
-                        <div class="p_normal">
-                            <p>Beer battered Icelandic cod, herb potato fries, smoked tartar sauce, pickled slaw, charred lemon.</p>
+                        <div class="item_separator"></div>
+                        <div class="name_dish">
+                            <h3>$12</h3>
                         </div>
                     </div>
+                    <p>Prime beef patty, glazed pork belly, American cheese, chili relish, mustard aioli, arugula, sesame brioche, frizzled onions.</p>
+                </div>
+                <div class="menu_items">
+                    <div class="dish">
+                        <div class="name_dish">
+                            <h3>Fish & Chips</h3>
+                        </div>
+                        <div class="item_separator"></div>
+                        <div class="name_dish">
+                            <h3>$7</h3>
+                        </div>
+                    </div>
+                    <p>Beer battered Icelandic cod, herb potato fries, smoked tartar sauce, pickled slaw, charred lemon.</p>
                 </div>
             </div>
         </section>
-        <section id="Meat_Quality">
-            <div class="img grilled_burgers"><img src="img/grilled_burgers.jpg" alt="grilled burgers"></div>
-            <div class="">
-                <div class="normal header2">
+        <section id="meat_quality" class="meat_quality">
+            <div class="img_grilled_burgers"><img src="img/grilled_burgers.jpg" alt="grilled burgers"></div>
+            <div class="meat_text">
+                <div class="normal_header2">
                     <h2>Meat Quality</h2>
                     <hr class="green-border">
                 </div>
@@ -125,14 +134,12 @@
             </div>
         </section>
         <section id="enjoy">
-            <div class="normal header2">
+            <div class="normal_header2">
                 <h2>Enjoy Your Day with Freddy Burger</h2>
                 <hr class="green-border">
             </div>
-            <div class="italics p">
-                <p>Our Burger Food Truck is the one-stop place that feeds the needs of any hungry burger lover.
-                    Come grab our delicious and diverse dishes!</p>
-            </div>
+            <p>Our Burger Food Truck is the one-stop place that feeds the needs of any hungry burger lover.
+                Come grab our delicious and diverse dishes!</p>
             <div class="sale_of_burgers_on_the_street"><img src="img/sale_of_burgers_on_the_street.jpg" alt="sale of burgers on the street"></div>
         </section>
         <section id="on_insta">
@@ -140,13 +147,14 @@
                 <h2>Find Us On Instagram @FreddyBurger</h2>
                 <hr class="green-border">
             </div>
-            <div>
-                <div><img src="img/on_the_beach.jpg" alt="on the beach"></div>
-                <div><img src="img/friendly_meeting.jpg" alt="friendly meeting"></div>
-                <div><img src="img/grilled_burgers.jpg" alt="grilled burgers"></div>
-                <div><img src="img/black_burger.jpg" alt="black burger"></div>
+            <div class="all_insta_photo">
+                <div class="insta_photo"><img src="img/on_the_beach.jpg" alt="on the beach"></div>
+                <div class="insta_photo"><img src="img/friendly_meeting.jpg" alt="friendly meeting"></div>
+                <div class="insta_photo"><img src="img/grilled_burgers.jpg" alt="grilled burgers"></div>
+                <div class="insta_photo"><img src="img/black_burger.jpg" alt="black burger"></div>
             </div>
         </section>
+        <!--
         <section id="awards">
             <h2 class="awards">Awards</h2>
             <hr class="green-border">
@@ -199,8 +207,9 @@
                 <input type="submit">
             </form>
         </section>
+        -->
     </main>
-    <footer>
+    <!--<footer>
         <div class="logo">
             <h3 class="name_low">Freddy Burger</h3>
         </div>
@@ -218,6 +227,7 @@
             <a href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
         </div>
         <p>© Created by All rights Reserved</p>
-    </footer>
+    </footer>-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>-->
 </body>
 </html>

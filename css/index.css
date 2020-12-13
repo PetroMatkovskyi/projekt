@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-h1 h2 h3 h4 div nav a hr button img span p label input form {
+p, h1, h3, h4, div, ul, li, nav, a, hr, button, img, span, p, label, input, form {
     margin: 0;
     padding: 0;
 }
@@ -13,12 +13,34 @@ h1 h2 h3 h4 div nav a hr button img span p label input form {
     --accent-color: #f09b13;
 }
 
+:hover {
+    transition: all 0.2s ease-out;
+}
+
+:focus {
+    outline: none;
+}
+
 body {
     max-width: 1500px;
     margin: auto;
 }
 
-@media (min-width: 990px) {
+img {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 770px) {
+    .all_insta_photo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 850px) {
 
     .burger-icon {
         display: none;
@@ -26,9 +48,35 @@ body {
 
     header .menu_top {
         display: flex;
-        align-items: center
+        justify-content: space-around;
+        align-items: center;
     }
 
+    section#about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu_main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .menu_items {
+        max-width: 515px;
+    }
+
+    #meat_quality {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 990px) {
+    .all_insta_photo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 header {
@@ -56,7 +104,6 @@ header {
 
 .menu_top {
     display: none;
-
 }
 
 .menu_top a {
@@ -74,7 +121,6 @@ header {
     height: 30px;
 }
 
-
 .menu_top a:hover {
     color: #e7903b;
     font-weight: 600;
@@ -82,13 +128,11 @@ header {
     padding-bottom: 5px;
 }
 
-
 /*moto*/
 #motto {
     display: flex;
     flex-direction: column;
     padding: 100px 0 130px 0;
-
 }
 
 #motto h2 {
@@ -106,21 +150,25 @@ header {
 .buttons {
     display: flex;
     justify-content: center;
+}
 
+button {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    line-height: 1.2;
+    height: 61px;
+    margin: 0 10px;
+    padding: 0 30px;
+    background: transparent;
 }
 
 .buttons button {
-    border: 1px solid;
-    border-radius: 10px;
     border-color: #e7903b;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: center;
-    height: 61px;
-    font-family: var(----accent-font-family:);
-    margin: 0 10px;
-    padding: 0 30px;
-    letter-spacing: .1em;
     color: #fff;
 }
 
@@ -128,26 +176,236 @@ header {
     background: #e7903b;
 }
 
+.catering:hover {
+    background: #f19f1c;
+    border: 1px solid #f19f1c;
+    border-radius: 10px;
+}
 
 .see_menu {
     background: transparent;
-    font-weight: 400;
 }
 
 .see_menu:hover {
     color: #62a142;
+    border-color: #62a142;
+    background: linear-gradient(rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.1))
+}
+
+.see_menu:active {
+    color: #fff;
+    border: #fff;
+    background: linear-gradient(rgba(0, 255, 0, 0.01), rgba(0, 255, 0, 0.01));
     border: 1px solid;
     border-radius: 10px;
-    border-color: #62a142;
-    transition: all 0.2s ease-out;
+    border-color: #fff;
+}
+
+/*About*/
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 90px 15px 90px 15px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15px 0 15px;
+}
+
+.burger_on_the_windows {
+    margin: 0 0 30px 0;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+#about h2 {
+    margin: 28px 0 15px 0;
+}
+
+.about_button button {
+    border: 2px solid #62a142;
+    padding: 15px 30px 15px 30px;
+    background: transparent;
+    margin: auto;
+}
+
+.about_button button:hover {
+    border: 2px solid #62a142;
+    color: #62a142;
+}
+
+.about_button button:focus {
+    color: #282623;
+    border: 2px solid #534939;
+}
+
+/*Our Menu*/
+
+#our_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(240, 155, 19, 0.96), rgba(240, 155, 19, 0.96)), url(../img/mini-burgers.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 80px 0px 90px 0px;
+    background-attachment: fixed;
+}
+
+.menu_items {
+    font-size: 18px;
+}
+
+#menu_heading {
+    margin-bottom: 15px;
+}
+
+#our_menu .menu_heading .green-border {
+    margin: auto;
+}
+
+.buttons_menu {
+    margin-top: 60px;
+}
+
+.buttons_menu button {
+    border: none;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    font-weight: 600;
+    font-size: 24px;
+    opacity: .6;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.buttons_menu button:hover {
+    color: #fff;
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.menu_items {
+    border: 1px solid#fff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: left;
+    margin: 20px 25px 20px 25px;
+    padding: 20px 25px 20px 25px;
+}
+
+.name_dish h3 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.dish {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.item_separator {
+    width: 100%;
+    border-bottom: 1px solid;
+    opacity: .125;
+    min-width: 1ch;
+    margin: -8px 5px 8px 10px;
+}
+
+/*Meat Qualitu*/
+
+.meat_quality {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 24px;
+    margin: 90px 0 90px 0;
+}
+
+.img_grilled_burgers {
+    margin: 20px
+}
+
+.meat_text {
+    padding-left: 20px;
+    margin: 20px;
+}
+
+#meat_quality .normal_header2 h2 {
+    margin-bottom: 0;
+}
+
+#meat_quality .normal_header2 .green-border {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+ul {
+    margin-top: 45px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+/*Enjoy*/
+
+#enjoy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: #fafafa;
+    padding: 25px;
+}
+
+#enjoy .green-border {
+    margin: auto;
+}
+
+#enjoy h2 {
+    margin-bottom: 10px;
+}
+
+#enjoy p {
+    font-size: 20px;
+    font-style: italic;
+    margin: 20px 20px 40px 20px;
+}
+
+
+/*Find Us*/
+
+#on_insta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.insta_photo {
+    margin: 10px;
+}
+
+#on_insta .green-border {
+    margin: auto;
 }
 
 h2 {
     font-family: 'Bree Serif', serif;
-    font-size: 41px;
+    font-size: 34px;
     color: #282623;
-    text-align: center;
     font-weight: 100;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -156,9 +414,12 @@ h3 {
 }
 
 .green-border {
+    display: block;
     width: 60px;
     height: 4px;
     background-color: #62a142;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .green_i {
@@ -166,7 +427,6 @@ h3 {
     font-style: italic;
     font-size: 20px;
     font-weight: 400;
-
 }
 
 #awards {
@@ -182,40 +442,20 @@ h3 {
 .box {
     background: #fafafa;
     margin: 15px 30px 15px 30px;
-
-}
-
-.p_normal {
-    font-size: 18px;
-    color: #534939;
-    font-weight: 600;
 }
 
 .border_in_menu {
     background: #282623;
     border-bottom: 1px solid;
     margin: -8px 5px 8px 10px;
-
 }
 
-#our_menu {
-    background-color: #f09b13;
-    text-align: center;
-    padding: 80px 0px 90px 0px;
-}
 
 #menu_heading {
     color: #ffffff !important;
-
 }
 
-.menu_items {
-    background-color: #ffffff;
-    text-align: left;
-    margin: 20px 25px 20px 25px;
-    padding: 20px 15px 20px 15px;
-
-}
+.menu_items {}
 
 #current_location {
     font-size: 18px;
@@ -224,7 +464,6 @@ h3 {
 
 #current_location p b {
     color: #f09b13;
-
 }
 
 footer {
@@ -267,7 +506,6 @@ footer p {
 }
 
 /*для красивішого маштабування*/
-img,
-#awards {
-    max-width: 650px
-}
+/*img, #awards {
+max-width: 650px
+}*/
