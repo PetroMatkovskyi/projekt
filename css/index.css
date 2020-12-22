@@ -1,22 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-p,
-h1,
-h3,
-h4,
-div,
-ul,
-li,
-nav,
-a,
-hr,
-button,
-img,
-span,
-p,
-label,
-input,
-form {
+p, h1, h3, h4, div, ul, li, nav, a, hr, button, img, span, p, label, input, form {
     margin: 0;
     padding: 0;
 }
@@ -49,8 +33,20 @@ img {
     height: 100%;
 }
 
+@media (min-width: 400px) {
+    .dish {
+        white-space: nowrap;
+    }
+
+    .dish .name_dish h3 {
+        font-size: 34px;
+    }
+}
+
 @media (min-width: 770px) {
-    .all_insta_photo {
+
+    .all_insta_photo,
+    .box {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -68,28 +64,28 @@ img {
         align-items: center;
     }
 
+
+
+    #meat_quality,
+    .menu_main,
     section#about {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
-    .menu_main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 
-
-    #meat_quality {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media (min-width: 990px) {
-    .all_insta_photo {
+
+    .all_insta_photo,
+    .box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+
+
 }
 
 header {
@@ -261,6 +257,8 @@ button {
     border: 2px solid #534939;
 }
 
+
+
 /*Our Menu*/
 
 #our_menu {
@@ -279,7 +277,7 @@ button {
     margin-bottom: 15px;
 }
 
-#our_menu .menu_heading .green-border {
+#our_menu .menu_heading .dividing_line {
     margin: auto;
 }
 
@@ -321,14 +319,13 @@ button {
 }
 
 .name_dish h3 {
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 600;
 }
 
 .dish {
     display: flex;
     justify-content: space-around;
-    white-space: nowrap;
 }
 
 .item_separator {
@@ -342,6 +339,8 @@ button {
 .displayOff {
     display: none;
 }
+
+
 
 /*Meat Qualitu*/
 
@@ -366,7 +365,7 @@ button {
     margin-bottom: 0;
 }
 
-#meat_quality .normal_header2 .green-border {
+#meat_quality .normal_header2 .dividing_line {
     margin-bottom: 15px;
     margin-top: 15px;
 }
@@ -388,7 +387,7 @@ ul {
     padding: 25px;
 }
 
-#enjoy .green-border {
+#enjoy .dividing_line {
     margin: auto;
 }
 
@@ -403,6 +402,8 @@ ul {
 }
 
 
+
+
 /*Find Us*/
 
 #on_insta {
@@ -411,13 +412,17 @@ ul {
     text-align: center;
 }
 
-.insta_photo {
+
+.photo {
     margin: 10px;
 }
 
-#on_insta .green-border {
+#on_insta .dividing_line {
     margin: auto;
 }
+
+/*Awards*/
+
 
 h2 {
     font-family: 'Bree Serif', serif;
@@ -432,7 +437,7 @@ h3 {
     font-weight: bold;
 }
 
-.green-border {
+.dividing_line {
     display: block;
     width: 60px;
     height: 4px;
@@ -458,10 +463,25 @@ h3 {
     font-size: 24px;
 }
 
-.box {
+
+.sheet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 10px;
+    padding: 10px 25px;
     background: #fafafa;
-    margin: 15px 30px 15px 30px;
+
 }
+
+.mini_box {
+    margin: 5px 0;
+}
+
+#awards .dividing_line {
+    margin: auto;
+}
+
 
 .border_in_menu {
     background: #282623;
