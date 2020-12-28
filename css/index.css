@@ -1,23 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-p,
-h1,
-h2,
-h3,
-h4,
-div,
-ul,
-li,
-nav,
-a,
-hr,
-button,
-img,
-span,
-p,
-label,
-input,
-form {
+p, h1, h2, h3, h4, div, ul, li, nav, a, hr, button, img, span, p, label, input, form {
     margin: 0;
     padding: 0;
 }
@@ -128,7 +111,7 @@ img {
     section#current_location {
         z-index: 2;
         position: absolute;
-        right: 80px;
+        right: 120px;
         margin-top: 120px;
     }
 
@@ -151,21 +134,11 @@ body header .background {
     background-size: cover;
 }
 
-#upper_part,
-.upper_line {
+#upper_part, .upper_line {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
-}
-
-. h1,
-. h2,
-. name_low {
-    color: var(--accent-color);
-    font-family: var(--accent-font-family);
-    font-size: 34px;
-    font-weight: 400;
 }
 
 .menu_top a {
@@ -190,7 +163,8 @@ body header .background {
     padding-bottom: 5px;
 }
 
-/*moto*/
+/*Motto*/
+
 #motto {
     display: flex;
     flex-direction: column;
@@ -293,9 +267,7 @@ burger,
     color: #4f5047;
 }
 
-.name_top h1,
-.name_low,
-.name_top h2 {
+.name_top h1, .name_low, .name_top h2 {
     color: var(--accent-color);
     font-family: var(--accent-font-family);
     font-size: 34px;
