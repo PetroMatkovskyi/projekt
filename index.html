@@ -11,37 +11,60 @@
 
 <body>
     <header>
-        <section id="intro">
-            <div id="upper_part">
-                <div class="name_top">
-                    <h1>Freddy Burger</h1>
-                </div>
-                <nav class="menu_top">
-                    <a href="#truck_locator">Truck Locato</a>
-                    <a href="#about">About</a>
-                    <a href="#our_menu">Menu</a>
-                    <a href="#schedule">Schedule</a>
-                    <a href="#catering">Catering</a>
-                    <a href="#contacns">Contacns</a>
-                    <div class="social">
-                        <a class="social" href="#facebook"><img src="img/facebook.png" width="30" height="30" alt="facebook.com"></a>
-                        <a class="social" href="#twitter"><img src="img/twitter.png" width="30" height="30" alt="twitter.com"></a>
-                        <a class="social" href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
+        <div class="bodyOff">
+            <div class="background">
+                <section id="intro">
+                    <div id="upper_part">
+                        <div class="name_top">
+                            <h1>Freddy Burger</h1>
+                        </div>
+                        <nav class="menu_top display-none">
+                            <a href="#truck_locator">Truck Locato</a>
+                            <a href="#about">About</a>
+                            <a href="#our_menu">Menu</a>
+                            <a href="#schedule">Schedule</a>
+                            <a href="#catering">Catering</a>
+                            <a href="#contacns">Contacns</a>
+                            <div class="social">
+                                <a class="social" href="#facebook"><img src="img/facebook.png" width="30" height="30" alt="facebook.com"></a>
+                                <a class="social" href="#twitter"><img src="img/twitter.png" width="30" height="30" alt="twitter.com"></a>
+                                <a class="social" href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
+                            </div>
+                        </nav>
+                        <label class="burger-icon" for="burger-checkbox">☰</label>
                     </div>
-                </nav>
-                <label class="burger-icon" for="burger-checkbox">☰</label>
+                    <section id="motto">
+                        <h2>You Have a Party - We Bring You<span class="burgers"> burgers!</span>
+                        </h2>
+                        <div class="buttons">
+                            <button class="catering">ORDER CATERING</button>
+                            <button class="see_menu">SEE MENUS</button>
+                        </div>
+                    </section>
+                </section>
             </div>
-            <section id="motto">
-                <h2>You Have a Party - We Bring You<span class="burgers"> burgers!</span>
-                </h2>
-                <div class="buttons">
-                    <button class="catering">ORDER CATERING</button>
-                    <button class="see_menu">SEE MENUS</button>
+        </div>
+        <div class="burger displayOff">
+            <div class="name_top upper_line">
+                <h2>Freddy Burger</h2>
+                <label class="burger-button" for="burger-checkbox">☰</label>
+            </div>
+            <nav class="menu_burger">
+                <a href="#truck_locator">Truck Locato</a>
+                <a href="#about">About</a>
+                <a href="#our_menu">Menu</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#catering">Catering</a>
+                <a href="#contacns">Contacns</a>
+                <div class="social">
+                    <a class="social" href="#facebook"><img src="img/facebook.png" width="30" height="30" alt="facebook.com"></a>
+                    <a class="social" href="#twitter"><img src="img/twitter.png" width="30" height="30" alt="twitter.com"></a>
+                    <a class="social" href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
                 </div>
-            </section>
-        </section>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="bodyOff">
         <section id="about">
             <div class="burger_on_the_windows"><img src="img/burger_on_the_window.jpg" alt="burger on the window"></div>
             <div class="text">
@@ -141,7 +164,7 @@
                 </div>
             </div>
             <div id="drinks" class="menu_main displayOff">
-                <div class="menu_items">
+                <div class="menu_items drink">
                     <div class="dish">
                         <div class="name_dish">
                             <h3>Coke</h3>
@@ -153,7 +176,7 @@
                     </div>
                     <p>Classic</p>
                 </div>
-                <div class="menu_items">
+                <div class="menu_items drink">
                     <div class="dish">
                         <div class="name_dish">
                             <h3>Tea</h3>
@@ -165,7 +188,7 @@
                     </div>
                     <p>Green/Black</p>
                 </div>
-                <div class="menu_items">
+                <div class="menu_items drink">
                     <div class="dish">
                         <div class="name_dish">
                             <h3>Smoothies</h3>
@@ -177,7 +200,7 @@
                     </div>
                     <p>Tropical/Vegan/Classic</p>
                 </div>
-                <div class="menu_items">
+                <div class="menu_items drink">
                     <div class="dish">
                         <div class="name_dish">
                             <h3>Mojito</h3>
@@ -191,7 +214,6 @@
                 </div>
             </div>
         </section>
-
         <section id="meat_quality" class="meat_quality">
             <div class="img_grilled_burgers"><img src="img/grilled_burgers.jpg" alt="grilled burgers"></div>
             <div class="meat_text">
@@ -227,21 +249,15 @@
             </div>
 
             <div class="all_insta_photo box">
-                <div class="photo"><img class="img1 insta_photo" alt="Image"></div>
-                <div class="photo"><img class="img2 insta_photo" alt="Image"></div>
-                <div class="photo"><img class="img3 insta_photo" alt="Image"></div>
-                <div class="photo"><img class="img4 insta_photo" alt="Image"></div>
+                <div class="photo "><img class="img1 insta_photo" alt="Image"></div>
+                <div class="photo display_none"><img class="img2 insta_photo" alt="Image"></div>
+                <div class="photo display_none"><img class="img3 insta_photo" alt="Image"></div>
+                <div class="photo display_none"><img class="img4 insta_photo" alt="Image"></div>
             </div>
             <div class="about_button">
                 <button class="prev see_menu">Previous</button>
                 <button class="next see_menu">Next</button>
             </div>
-            <!--<div class="all_insta_photo">
-                <div class="insta_photo"><img src="img/on_the_beach.jpg" alt="on the beach"></div>
-                <div class="insta_photo"><img src="img/friendly_meeting.jpg" alt="friendly meeting"></div>
-                <div class="insta_photo"><img src="img/grilled_burgers.jpg" alt="grilled burgers"></div>
-                <div class="insta_photo"><img src="img/black_burger.jpg" alt="black burger"></div>
-            </div>-->
         </section>
         <section id="awards">
             <h2 class="awards">Awards</h2>
@@ -270,38 +286,38 @@
                 </div>
             </div>
         </section>
-
-        <!--
-        <div class="map">
-            <nav><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1042971336547!2d24.032727115096687!3d49.840497779395825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6c73f1055b%3A0xb4fb00b8f7f8b022!2z0LLRg9C70LjRhtGPINCS0LDQu9C-0LLQsCwgMjcsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1607198030825!5m2!1suk!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></nav>
+        <div class="navigation">
+            <nav class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1042971336547!2d24.032727115096687!3d49.840497779395825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6c73f1055b%3A0xb4fb00b8f7f8b022!2z0LLRg9C70LjRhtGPINCS0LDQu9C-0LLQsCwgMjcsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1607198030825!5m2!1suk!2sua" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </nav>
+            <section id="current_location">
+                <h2><span>Current location</span><span> and schedule</span></h2>
+                <p><b>11.30 AM - 2.30 PM</b></p>
+                <p><i>Port Jasen, 7432 Kay Tunnel</i></p>
+                <p><b>6.00 AM - 11.00 PM</b></p>
+                <p><i>East Dellaville, 85 Grant Circle</i></p>
+            </section>
         </div>
-        <section id="current_location">
-            <h2>Current location and schedule</h2>
-            <p><b>11.30 AM - 2.30 PM</b></p>
-            <p><i>Port Jasen, 7432 Kay Tunnel</i></p>
-            <p><b>6.00 AM - 11.00 PM</b></p>
-            <p><i>East Dellaville, 85 Grant Circle</i></p>
+        <section id="hire_us" class="hire_us">
+            <div class="form">
+                <h2>Hire Us for Your Next Event!</h2>
+                <hr class="dividing_line">
+                <p class="green_i">Contact us with your catering request and enjoy a gastronomic party!</p>
+                <form>
+                    <label>
+                        <input type="text" name="user-name" placeholder="Enter your full name*">
+                    </label>
+                    <label>
+                        <input type="tel" name="user-phone-num" placeholder="Enter your phone number*">
+                    </label>
+                    <label>
+                        <input type="email" name="user-email" placeholder="Enter your email*">
+                    </label>
+                    <input class="submit" type="submit" value="book now">
+                </form>
+            </div>
         </section>
-        <section id="hire_us">
-            <h2>Hire Us for Your Next Event!</h2>
-            <hr class="dividing_line">
-            <p class="green_i">Contact us with your catering request and enjoy a gastronomic party!</p>
-            <form>
-                <label>Your full name
-                    <input type="text" name="user-name" placeholder="Enter your full name*">
-                </label>
-                <label>Your phone number
-                    <input type="text" name="user-phone-num" placeholder="Enter your phone number*">
-                </label>
-                <label>Your email
-                    <input type="email" name="user-email" placeholder="Enter your email*">
-                </label>
-                <input type="submit">
-            </form>
-        </section>
-        -->
     </main>
-    <!--<footer>
+    <footer class="bodyOff">
         <div class="logo">
             <h3 class="name_low">Freddy Burger</h3>
         </div>
@@ -311,15 +327,19 @@
             <a href="#menu">Menu</a>
             <a href="#schedule">Schedule</a>
             <a href="#catering">Catering</a>
+            <a href="#">Franchise</a>
+            <a href="#">News</a>
             <a href="#contacns">Contacns</a>
         </nav>
         <div class="social">
-            <a href="#facebook"><img src="img/facebook.png" width="30" height="30" alt="facebook.com"></a>
-            <a href="#twitter"><img src="img/twitter.png" width="30" height="30" alt="twitter.com"></a>
-            <a href="#instagram"><img src="img/instagram.png" width="30" height="30" alt="instagram.com"></a>
+            <a href="#facebook"><img src="img/facebook.png" alt="facebook.com"></a>
+            <a href="#twitter"><img src="img/twitter.png" alt="twitter.com"></a>
+            <a href="#instagram"><img src="img/instagram.png" alt="instagram.com"></a>
         </div>
-        <p>© Created by All rights Reserved</p>
-    </footer>-->
-    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>-->
+        <div class="low_case">
+            <p>© Created by</p>
+            <p>All rights Reserved</p>
+        </div>
+    </footer>
     <script src="js/index.js"></script>
 </body></html>

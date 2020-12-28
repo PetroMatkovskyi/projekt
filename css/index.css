@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-p, h1, h3, h4, div, ul, li, nav, a, hr, button, img, span, p, label, input, form {
+p,
+h1,
+h2,
+h3,
+h4,
+div,
+ul,
+li,
+nav,
+a,
+hr,
+button,
+img,
+span,
+p,
+label,
+input,
+form {
     margin: 0;
     padding: 0;
 }
@@ -26,6 +43,7 @@ body {
     margin: auto;
 }
 
+
 img {
     border: 1px solid transparent;
     border-radius: 10px;
@@ -50,6 +68,18 @@ img {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    footer .menu_low {
+        flex-direction: row;
+    }
+
+    .low_case {
+        display: flex;
+    }
+
+    .photo.display_none {
+        display: block;
+    }
 }
 
 @media (min-width: 850px) {
@@ -64,15 +94,12 @@ img {
         align-items: center;
     }
 
-
-
     #meat_quality,
     .menu_main,
-    section#about {
+    section #about {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
 
 }
 
@@ -84,35 +111,61 @@ img {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    #hire_us {
+        display: flex;
+        justify-content: flex-end;
+        background-attachment: fixed;
+    }
 
+    .map {
+        width: 100%;
+    }
 
+    div.navigation {
+        display: flex;
+    }
+
+    section#current_location {
+        z-index: 2;
+        position: absolute;
+        right: 80px;
+        margin-top: 120px;
+    }
+
+    #current_location h2 {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+body header .background {
+    max-width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../img/big-burgers.png);
     background-position: center;
     background-size: cover;
 }
 
-#upper_part {
+#upper_part,
+.upper_line {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
 }
 
-.name_top h1 {
+. h1,
+. h2,
+. name_low {
     color: var(--accent-color);
     font-family: var(--accent-font-family);
     font-size: 34px;
     font-weight: 400;
-}
-
-.menu_top {
-    display: none;
 }
 
 .menu_top a {
@@ -210,13 +263,57 @@ button {
     border-color: #fff;
 }
 
+.display-none {
+    display: none;
+}
+
+burger,
+.menu_burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.burger-button {
+    font-size: 3rem;
+    padding: 12px 8px;
+}
+
+.menu_burger {
+    text-align: center;
+}
+
+.menu_burger a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 15px 10px 15px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 1px;
+    color: #4f5047;
+}
+
+.name_top h1,
+.name_low,
+.name_top h2 {
+    color: var(--accent-color);
+    font-family: var(--accent-font-family);
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.menu_burger a:hover {
+    color: #62a142;
+}
+
 /*About*/
+
 #about {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 90px 15px 90px 15px;
+    padding: 80px 15px;
 }
 
 .text {
@@ -233,7 +330,7 @@ button {
 #about p {
     font-size: 18px;
     line-height: 1.5;
-    margin: 0 0 30px 0;
+    margin-bottom: 30px;
 }
 
 #about h2 {
@@ -256,8 +353,6 @@ button {
     color: #282623;
     border: 2px solid #534939;
 }
-
-
 
 /*Our Menu*/
 
@@ -297,16 +392,13 @@ button {
     cursor: pointer;
 }
 
-.buttons_menu button:hover {
+.buttons_menu button:hover,
+.buttons_menu button:focus {
     color: #fff;
     text-decoration: underline;
     opacity: 1;
+    font-size: 30px;
 }
-
-.menu_main {
-    max-width: 100%;
-}
-
 
 .menu_items {
     border: 1px solid#fff;
@@ -336,11 +428,10 @@ button {
     margin: -8px 5px 8px 10px;
 }
 
-.displayOff {
+.displayOff,
+.display_none {
     display: none;
 }
-
-
 
 /*Meat Qualitu*/
 
@@ -357,7 +448,7 @@ button {
 }
 
 .meat_text {
-    padding-left: 20px;
+    padding-left: 30px;
     margin: 20px;
 }
 
@@ -401,9 +492,6 @@ ul {
     margin: 20px 20px 40px 20px;
 }
 
-
-
-
 /*Find Us*/
 
 #on_insta {
@@ -411,7 +499,6 @@ ul {
     flex-direction: column;
     text-align: center;
 }
-
 
 .photo {
     margin: 10px;
@@ -422,7 +509,6 @@ ul {
 }
 
 /*Awards*/
-
 
 h2 {
     font-family: 'Bree Serif', serif;
@@ -463,7 +549,6 @@ h3 {
     font-size: 24px;
 }
 
-
 .sheet {
     display: flex;
     flex-direction: column;
@@ -471,7 +556,6 @@ h3 {
     margin: 20px 10px;
     padding: 10px 25px;
     background: #fafafa;
-
 }
 
 .mini_box {
@@ -482,6 +566,104 @@ h3 {
     margin: auto;
 }
 
+/*Map*/
+
+.navigation {
+    margin: 50px 0;
+}
+
+#current_location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    padding: 10px 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+#current_location p,
+#current_location h2 {
+    margin: 10px 0;
+}
+
+/*HIRE US*/
+
+.hire_us {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgba(40, 38, 35, 0.5), rgba(40, 38, 35, 1)), url(../img/footer_back.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    margin: 60px 20px;
+    padding: 25px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    padding: 30px 20px;
+    background: #e5e5e4;
+    color: #9f9a9e;
+    border: solid 1px #e5e5e4;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+#hire_us .form .submit {
+    background: #282623;
+    color: #fff;
+    border: solid 1px #282623;
+    border-radius: 10px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+#hire_us .form .submit:hover {
+    color: #62a142;
+}
+
+#hire_us .form .submit:active {
+    color: #282623;
+    background: #62a142;
+    border: 1px solid #62a142;
+}
+
+
+
+/*Footer*/
+footer,
+.menu_low {
+    display: flex;
+    flex-direction: column;
+    background-color: #282623;
+    align-items: center
+}
+
+.social img {
+    max-width: 40px;
+}
 
 .border_in_menu {
     background: #282623;
@@ -489,9 +671,8 @@ h3 {
     margin: -8px 5px 8px 10px;
 }
 
-
 #menu_heading {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 #current_location {
@@ -503,46 +684,29 @@ h3 {
     color: #f09b13;
 }
 
-footer {
-    background-color: #282623;
-}
-
-.menu_low a {
+.menu_low a,
+.menu_low {
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     padding: 0px 10px 5px 10px;
+    margin: 10px 10px;
 }
 
 .menu_low a:hover {
     color: #e7903b;
 }
 
-.name_low {
-    font-family: var(--font-family);
-    color: #f09b13;
-    font-size: 28px;
-    font-weight: 400;
-}
-
 footer p {
     color: #6d7074;
-    text-align: center
+    text-align: center;
+    margin: 10px;
 }
 
 .burger-icon {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #ffffff;
     padding: 12px 8px;
 }
-
-#burger-checkbox {
-    display: none;
-}
-
-/*для красивішого маштабування*/
-/*img, #awards {
-max-width: 650px
-}*/

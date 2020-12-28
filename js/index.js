@@ -74,3 +74,23 @@ drinksButton.addEventListener("click", showDrinksMenu);
   document.querySelector(".prev").addEventListener("click", showPrev);
   showCurrent();
 }
+
+//Burger menu
+
+const bodyOff = document.querySelectorAll(".bodyOff");
+const burger = document.querySelector(".burger");
+
+function burgerOn() {
+  for (let i = 0; i < bodyOff.length; i++)
+    bodyOff[i].classList.add("displayOff");
+  burger.classList.remove("displayOff");
+}
+
+function burgerOff() {
+  for (let i = 0; i < bodyOff.length; i++)
+    bodyOff[i].classList.remove("displayOff");
+  burger.classList.add("displayOff");
+}
+
+document.querySelector(".burger-icon").addEventListener("click", burgerOn);
+document.querySelector(".burger-button").addEventListener("click", burgerOff);
