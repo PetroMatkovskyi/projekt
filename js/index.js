@@ -1,28 +1,36 @@
 const mainMenu = document.querySelector("#main");
 const vegetarianMenu = document.querySelector("#vegetarian");
 const drinksMenu = document.querySelector("#drinks");
+const mainButton = document.querySelector(".main-button");
+const vegetarianButton = document.querySelector(".vegetarian-button");
+const drinksButton = document.querySelector(".drinks-button");
 
 function showMainMenu() {
   mainMenu.classList.remove("displayOff");
+  mainButton.classList.add("focus");
   vegetarianMenu.classList.add("displayOff");
   drinksMenu.classList.add("displayOff");
+  vegetarianButton.classList.remove("focus");
+  drinksButton.classList.remove("focus");
 }
 
 function showVegetarianMenu() {
   vegetarianMenu.classList.remove("displayOff");
+  vegetarianButton.classList.add("focus");
   mainMenu.classList.add("displayOff");
   drinksMenu.classList.add("displayOff");
+  mainButton.classList.remove("focus");
+  drinksButton.classList.remove("focus");
 }
 
 function showDrinksMenu() {
   drinksMenu.classList.remove("displayOff");
+  drinksButton.classList.add("focus");
   vegetarianMenu.classList.add("displayOff");
   mainMenu.classList.add("displayOff");
+  vegetarianButton.classList.remove("focus");
+  mainButton.classList.remove("focus");
 }
-
-const mainButton = document.querySelector(".main-button");
-const vegetarianButton = document.querySelector(".vegetarian-button");
-const drinksButton = document.querySelector(".drinks-button");
 
 mainButton.addEventListener("click", showMainMenu);
 vegetarianButton.addEventListener("click", showVegetarianMenu);
@@ -32,17 +40,24 @@ drinksButton.addEventListener("click", showDrinksMenu);
 
 {
   const images = [
-    "img/on_insta/fire-burger.jpg",
-    "img/on_insta/delicious-burger.jpg",
-    "img/on_insta/beautiful_view.jpg",
-    "img/on_insta/big-burgers.png",
-    "img/on_insta/black_burger.jpg",
-    "img/on_insta/on_the_beach.jpg",
-    "img/on_insta/grilled_burgers.jpg",
-    "img/on_insta/friendly_meeting.jpg",
+    {src:"img/on_insta/delicious-burger.jpg",
+     alt: "delicious burger"},      
+   {src: "img/on_insta/beautiful_view.jpg",
+    alt: "beautiful view"}, 
+    {src: "img/on_insta/big-burgers.png",
+      alt: "big burgers"}, 
+    {src: "img/on_insta/black_burger.jpg",
+      alt: "black burger"},
+     {src:"img/on_insta/on_the_beach.jpg",
+      alt: "on_the_beach"},
+    {src:"img/on_insta/grilled_burgers.jpg",
+      alt: "grilled burgers"},
+   {src: "img/on_insta/friendly_meeting.jpg",
+     alt: "friendly_meeting"} 
   ];
 
   let currentIdx = 0;
+
   function showCurrent() {
     const imgElement1 = document.querySelector(".all_insta_photo .img1");
     const imgElement2 = document.querySelector(".all_insta_photo .img2");
@@ -51,10 +66,14 @@ drinksButton.addEventListener("click", showDrinksMenu);
     const idx2 = currentIdx + 1 >= images.length ? 0 : currentIdx + 1;
     const idx3 = idx2 + 1 >= images.length ? 0 : idx2 + 1;
     const idx4 = idx3 + 1 >= images.length ? 0 : idx3 + 1;
-    imgElement1.src = images[currentIdx];
-    imgElement2.src = images[idx2];
-    imgElement3.src = images[idx3];
-    imgElement4.src = images[idx4];
+    imgElement1.src = images[currentIdx].src;
+    imgElement2.src = images[idx2].src;
+    imgElement3.src = images[idx3].src;
+    imgElement4.src = images[idx4].src;
+    imgElement1.alt = images[currentIdx].alt;
+    imgElement2.alt = images[idx2].alt;
+    imgElement3.alt = images[idx3].alt;
+    imgElement4.alt = images[idx4].alt;
   }
 
   function showNext() {
